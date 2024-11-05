@@ -1,0 +1,102 @@
+\documentclass[10pt,onecolumn,openright]{book}
+
+% Configure title, author, etc of the thesis in TexFiles/settings.tex
+
+%================================================================%
+%  All packages and new commands are treated in an own document  %
+%================================================================%
+\input{TexFiles/settings}
+
+%%==============The document begins here
+\begin{document}
+\frontmatter
+
+%================================================================%
+% Auxiliary pages
+%================================================================%
+%The first three pages. Regulated by the Chalmers/GU layouting guidelines.
+%CHECK those to be sure the format is up to date and everything is included!
+\include{TexFiles/firstpage}
+
+\setcounter{page}{1}
+
+%================================================================%
+% Table of contents, list of figures and tables
+%================================================================%
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage
+\thispagestyle{plain}
+\tableofcontents 
+%\newpage
+
+%If needed, lists of figures and tables
+%\listoffigures
+%\listoftables
+ 
+%\thispagestyle{empty} % To avoid page numbers in blank pages
+%\cleardoublepage
+
+\mainmatter
+
+%================================================================%
+% Chapters
+%================================================================%
+%\thispagestyle{empty} % To avoid page numbers in blank pages
+%\cleardoublepage 
+\part{Introduction}
+\label{part:introduction}
+%\thispagestyle{empty}
+%\cleardoublepage 
+\include{TexFiles/chapter_01}
+\label{part:literature}
+%\thispagestyle{empty}
+%\cleardoublepage
+\part{Literature review}
+\label{part:isl}
+%\thispagestyle{empty}
+\include{TexFiles/chapter_02}
+\label{part:classifiers}
+%\thispagestyle{empty} % To avoid page numbers in blank pages
+\include{TexFiles/chapter_03}
+%\cleardoublepage
+\label{part:avatar}
+%\thispagestyle{empty} % To avoid page numbers in blank pages
+\include{TexFiles/chapter_04}
+\label{part:rrg}
+%\thispagestyle{empty} % To avoid page numbers in blank pages
+\include{TexFiles/chapter_05}
+
+\include{TexFiles/chapter_06}
+\label{part:avatartech}
+
+%%================================================================%
+%% Bibliography
+%%================================================================%
+%\newpage
+%\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage\addcontentsline{toc}{chapter}{Bibliography}
+
+% Choose citation styles depending on whether you want numeric/alphabetic in settings.tex
+\printbibliography
+%================================================================%
+% Appended papers
+%================================================================%
+%The actual papers that are included in the thesis
+
+
+
+
+
+%
+%================================================================%
+% Appendices
+%================================================================%
+%\cleardoublepage
+%I place all appendices at the end of the thesis. Of course, you can also change this so that each appendix is directly following the paper it belongs to.
+%\addcontentsline{toc}{chapter}{Appendix}
+%\appendix
+%\chapter{Appendix - Paper A}
+%\input{papers/paperA/03_appendix}
+
+
+\end{document}
